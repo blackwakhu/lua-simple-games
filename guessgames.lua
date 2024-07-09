@@ -30,6 +30,7 @@ function guessgames.number_guessor()
   while true do
     local number = generate_number(min, max)
     local guess = number_guessor_prompt(min, max)
+    os.execute("sleep 2")
     if guess == nil then
       print("You have "..points.." point(s)")
       print("exiting ...")
@@ -40,6 +41,7 @@ function guessgames.number_guessor()
     else
       print("You did not get it")
     end
+    os.execute("sleep 3")
   end
 end
 
