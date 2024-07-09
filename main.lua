@@ -1,4 +1,4 @@
 guessgames = require("guessgames")
-print("hello world")
+print("Welcome to the simple games program")
 
-guessgames.sayhello("derrick shibero")
+guessgames.number_guessor()
