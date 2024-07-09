@@ -1,3 +1,8 @@
+--[[
+  @author: Derrick Wakhu Shibero
+  last seen: 09/07/2024
+]]
+
 local guessgames = {}
 
 function generate_number(min, max)

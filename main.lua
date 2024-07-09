@@ -1,3 +1,8 @@
+--[[
+  @author: Derrick Wakhu Shibero
+  last seen: 09/07/2024
+]]
+
 guessgames = require("guessgames")
 print("Welcome to the simple games program")
 
