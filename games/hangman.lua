@@ -6,6 +6,7 @@
 
 local hangman = {}
 utilities = require("modules.utilities")
+get_os = require("modules.get_os")
 
 function set_word(words)
   local sel_word = words[utilities.generate_number(1, #words)]
@@ -26,7 +27,6 @@ function play(word, dashes)
     local hint = utilities.generate_number(1, #word)
     print("the hint is "..string.sub(word, hint, hint))
   end
-  print(word)
   for i = 1, #word do
     while string.lower(string.sub(word, i, i)) ~= string.lower(string.sub(dashes, i, i)) do 
       print(dashes)
@@ -43,12 +43,29 @@ function play(word, dashes)
       end
     end
   end
+  os.execute("sleep 2")
+  get_os.clear_scrn()
 end
 
 function hangman.main()
-  print("welcome to hangman")
   local word = utilities.get_data("./modules/1000_words.txt")
-  load_game(word)
+  while true do
+    print("1. new game")
+    print("0. exit")
+    print("enter your choice")
+    local mychoice = io.read()
+    if mychoice == "1" then
+      os.execute("sleep 2")
+      get_os.clear_scrn()
+      load_game(word)
+    else
+      print("exiting ...")
+      print("thank you for playing")
+      os.execute("sleep 3")
+      get_os.clear_scrn()
+      return
+    end
+  end
 end
 
 return hangman
