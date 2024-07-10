@@ -6,4 +6,7 @@
 
 local hangmangame = {}
 
+function main()
+end
+
 return hangmangame
