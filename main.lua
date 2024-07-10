@@ -1,10 +1,11 @@
 --[[
   @author: Derrick Wakhu Shibero
   first pub date: july 9 2024
-  last update: july 9 20244
+  last update: july 10 20244
 ]]
 
-guessgames = require("guessgames")
+guessgames = require("games.guessgames")
+get_os = require("modules.get_os")
 print("Welcome to the simple games program")
 
 function menu()
@@ -14,10 +15,11 @@ function menu()
   print("0. Exit")
   print("Enter your choice:")
   local choice = io.read()
+  get_os.clear_scrn()
   if choice == "1" then
     guessgames.number_guessor()
     menu()
-  elseif choice == "2" then 
+  elseif choice == "2" then
     guessgames.rock_paper_scissors()
     menu()
   elseif choice == "0" then

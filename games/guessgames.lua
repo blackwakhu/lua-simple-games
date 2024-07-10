@@ -1,10 +1,11 @@
 --[[
   @author: Derrick Wakhu Shibero
   first pub date: july 9 2024
-  last update: july 9 2024
+  last update: july 10 2024
 ]]
 
 local guessgames = {}
+get_os = require("modules.get_os")
 
 function generate_number(min, max)
   return math.random(min, max)
@@ -42,6 +43,7 @@ function guessgames.number_guessor()
     if guess == nil then
       print("You have "..points.." point(s)")
       print("exiting ...")
+      get_os.clear_scrn()
       return
     elseif number == guess then
       print("You got it correct...")
@@ -83,6 +85,7 @@ function guessgames.rock_paper_scissors()
     if user_input == nil then
       print("You have "..score.." point(s)")
       print("exiting ...")
+      get_os.clear_scrn()
       return
     end
     print("the cpu generated "..cpu_input)

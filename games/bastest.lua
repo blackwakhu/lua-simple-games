@@ -3,3 +3,10 @@
   first pub date: july 10 2024
   last update: july 10 2024
 ]]
+
+local bastest = {}
+
+function main()
+end
+
+return bastest
