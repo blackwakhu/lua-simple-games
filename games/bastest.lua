@@ -5,8 +5,18 @@
 ]]
 
 local bastest = {}
+get_os = require("modules.get_os")
 
-function main()
+function bastest.main()
+  print("welcome to the game")
+  print("1. new game")
+  print("2. instructions")
+  print("3. settings")
+  print("0. exit")
+end
+
+function load_game()
+  print("hello world")
 end
 
 return bastest

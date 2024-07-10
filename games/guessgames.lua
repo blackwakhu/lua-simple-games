@@ -6,10 +6,7 @@
 
 local guessgames = {}
 get_os = require("modules.get_os")
-
-function generate_number(min, max)
-  return math.random(min, max)
-end
+utilities = require("modules.utilities")
 
 -- the functions for number generator
 function number_guessor_prompt(min, max)
@@ -37,7 +34,7 @@ function guessgames.number_guessor()
   local max = getMax()
   local points = 0
   while true do
-    local number = generate_number(min, max)
+    local number = utilities.generate_number(min, max)
     local guess = number_guessor_prompt(min, max)
     os.execute("sleep 2")
     if guess == nil then
@@ -58,7 +55,7 @@ end
 -- the functions for rock paper scissors
 function generate_item()
   local data = {"rock", "paper", "scissors"}
-  return data[generate_number(1, #data)]
+  return data[utilities.generate_number(1, #data)]
 end
 
 function get_user_rps_input()

@@ -6,12 +6,14 @@
 
 guessgames = require("games.guessgames")
 get_os = require("modules.get_os")
+bastest = require("games.bastest")
 print("Welcome to the simple games program")
 
 function menu()
   print("main menu")
   print("1. Number Guessor")
   print("2. Rock Paper Scissors")
+  print("3. Bastest")
   print("0. Exit")
   print("Enter your choice:")
   local choice = io.read()
@@ -21,6 +23,9 @@ function menu()
     menu()
   elseif choice == "2" then
     guessgames.rock_paper_scissors()
+    menu()
+  elseif choice == "3" then
+    bastest.main()
     menu()
   elseif choice == "0" then
      print("exiting...")
