@@ -1,6 +1,7 @@
 --[[
   @author: Derrick Wakhu Shibero
-  last seen: 09/07/2024
+  first pub date: july 9 2024
+  last update: july 9 2024
 ]]
 
 local guessgames = {}
